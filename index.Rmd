@@ -1,0 +1,26 @@
+---
+title: "<div style= 'background-color: LightSeaGreen; margin-left: 20px;'> <h1> index.Rmd </h1> </div>"
+author: "Edith Invernizzi"
+date: "3rd July 2017"
+output: 
+  html_document:
+    css: CSS/webstyles.css
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<div class="titleSection">
+##Search database
+<p> This is a catalogue of research data. </p>
+</div>
+
+<div class="shinyGadget">
+``` {r searchFilter, message=F, warning=F}
+require(shiny)
+shinyAppDir(appDir = "D:/Users/edith/Talks/R-group - Website building in R/search",
+             options = list(width="100%", height= "800px"))
+```
+</div>
